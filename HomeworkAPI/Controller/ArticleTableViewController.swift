@@ -22,6 +22,7 @@ class ArticleTableViewController: UITableViewController {
         
     }
     
+    
     func getAllData(){
         
         let url = "http://120.136.24.174:1301/v1/api/articles?page=1&limit=15"
