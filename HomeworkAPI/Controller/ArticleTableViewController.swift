@@ -29,9 +29,6 @@ class ArticleTableViewController: UITableViewController {
         Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["Authorization": "Basic QU1TQVBJQURNSU46QU1TQVBJUEBTU1dPUkQ="]).responseJSON { (response) in
             
             if response.result.value != nil{
-                
-                
-                
                 print("Success")
                 print(response.result.value!)
             }else{
