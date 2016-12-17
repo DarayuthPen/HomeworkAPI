@@ -2,7 +2,7 @@
 //  ArticleTableViewCell.swift
 //  HomeworkAPI
 //
-//  Created by Pen DaraYuth on 13/12/16.
+//  Created by KSHRD on 12/16/16.
 //  Copyright © 2016 Pen DaraYuth. All rights reserved.
 //
 
@@ -10,6 +10,11 @@ import UIKit
 
 class ArticleTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var TitleLable: UILabel!
+    @IBOutlet weak var DescriptionLable: UILabel!
+    @IBOutlet weak var PhotoImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

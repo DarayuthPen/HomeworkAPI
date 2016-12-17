@@ -8,43 +8,80 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
+import Kingfisher
 
 class ArticleTableViewController: UITableViewController {
-
+    
+    var article: [JSON] = [JSON]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-//        self.tableView.delegate = self
-//        self.tableView.dataSource = self
-
+        
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        
         getAllData()
         //postData()
-        
     }
-    
-    
+
+    //Alamofire
     func getAllData(){
         
         let url = "http://120.136.24.174:1301/v1/api/articles?page=1&limit=15"
     
         Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["Authorization": "Basic QU1TQVBJQURNSU46QU1TQVBJUEBTU1dPUkQ="]).responseJSON { (response) in
             
-            if response.result.value != nil{
-                print("Success")
-                print(response.result.value!)
-            }else{
-                print("Fail")
-                print(response.result.error!)
-            }
-
+//            if response.result.value != nil{
+//                print("Success")
+//                //print(response.result.value!)
+//                let myjson = JSON(response.result.value!);
+//                
+//                //If json is .Dictionary
+//                //print(myjson)
+////                for i in myjson{
+////                    print("CODE ::\(myjson["DATA"][1]["TITLE"])")
+////                }
+////                for (key, subJson) in myjson["DATA"] {
+////                    if let title = subJson["IMAGE"].string {
+////                        print(title)
+////                    }
+////                }
+//                
+//                //print("MYDATA-->\(myjson["DATA"]["TITLE"][0])")
+//                for (key,subJson):(String, JSON) in myjson {
+//                    //Do something you want
+//                    //print("DATA ->>\(subJson["LIMIT"])");
+//                    //print(myjson["DATA"])
+//                    let json = myjson["DATA"]
+//                    let title = json["TITLE"]
+//                    print(title)
+//                    
+//                }
+//                
+//              
+//            }else{
+//                print("Fail")
+//                print(response.result.error!)
+//            }
             
+            if let APIdata = response.data {
+                //Convert Data to Json (Using Swifty Json)
+                let Jsondata = JSON(data: APIdata)
+                //Dictionary
+                if let dictionary = Jsondata.dictionary{
+                    //Array
+                    self.article = (dictionary["DATA"]?.array)!
+                }
+                print(Jsondata)
+                self.tableView.reloadData()
+            }
+      
         }
         
     }
-    
 
-    
-    
+ 
 //    func getAllData(){
 //        
 //        let url = URL(string: "http://120.136.24.174:1301/v1/api/articles?page=1&limit=15")!
@@ -117,24 +154,28 @@ class ArticleTableViewController: UITableViewController {
 //
 //    
 //    // MARK: - Table view data source
-//
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        
-//        return 1
-//    }
-//
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//       
-//        return 1
-//    }
-//
-//    
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCell", for: indexPath)
-//
-//
-//        return cell
-//    }
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       
+        return article.count
+    }
+
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCell", for: indexPath) as! ArticleTableViewCell
+        
+        let articles = article[indexPath.row]
+        cell.TitleLable.text = articles["TITLE"].stringValue
+        cell.DescriptionLable.text = articles["DESCRIPTION"].stringValue
+        cell.PhotoImageView.kf.setImage(with: URL(string: articles["IMAGE"].stringValue.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!))
+
+        return cell
+    }
     
 
     

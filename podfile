@@ -9,6 +9,8 @@ target 'HomeworkAPI' do
   pod 'ObjectMapper', '~> 2.2'
 
 pod 'Alamofire', '~> 4.0'
+pod 'SwiftyJSON'
+pod 'Kingfisher'
 
   target 'HomeworkAPIUITests' do
     inherit! :search_paths

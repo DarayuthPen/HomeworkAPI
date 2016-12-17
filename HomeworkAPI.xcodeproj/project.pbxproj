@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B20BAC731E00770E00E68E8C /* ArticleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20BAC721E00770E00E68E8C /* ArticleTableViewController.swift */; };
-		B20BAC751E0079C300E68E8C /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20BAC741E0079C200E68E8C /* ArticleTableViewCell.swift */; };
 		B2E3D05E1E001D3F00902DB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E3D05D1E001D3F00902DB3 /* AppDelegate.swift */; };
 		B2E3D0651E001D4000902DB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2E3D0641E001D4000902DB3 /* Assets.xcassets */; };
 		B2E3D0731E001D4100902DB3 /* HomeworkAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E3D0721E001D4100902DB3 /* HomeworkAPIUITests.swift */; };
@@ -16,7 +15,7 @@
 		B2E3D0851E0035BD00902DB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2E3D0821E0035BD00902DB3 /* Main.storyboard */; };
 		BA03B537646F7977CADC4D20 /* Pods_HomeworkAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 596B9E38725993D164992964 /* Pods_HomeworkAPI.framework */; };
 		BFB343052D590EE9B0BB5282 /* Pods_HomeworkAPIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E96603CE0CA070622724AE /* Pods_HomeworkAPIUITests.framework */; };
-		EC3BEC841E01E3B300301DB2 /* MyArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3BEC831E01E3B300301DB2 /* MyArticle.swift */; };
+		EC6B1F1D1E048B8A00E52DE7 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6B1F1C1E048B8A00E52DE7 /* ArticleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +34,6 @@
 		1B1C53AFCE4C339DAA483CFE /* Pods-HomeworkAPIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeworkAPIUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomeworkAPIUITests/Pods-HomeworkAPIUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		596B9E38725993D164992964 /* Pods_HomeworkAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeworkAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B20BAC721E00770E00E68E8C /* ArticleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewController.swift; sourceTree = "<group>"; };
-		B20BAC741E0079C200E68E8C /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		B2E3D05A1E001D3F00902DB3 /* HomeworkAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeworkAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E3D05D1E001D3F00902DB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2E3D0641E001D4000902DB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,7 +45,8 @@
 		B2E3D0821E0035BD00902DB3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BC32C32A7E3B5B636637046A /* Pods-HomeworkAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeworkAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomeworkAPI/Pods-HomeworkAPI.release.xcconfig"; sourceTree = "<group>"; };
 		D85F734DA627FE3EDEA3D630 /* Pods-HomeworkAPIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeworkAPIUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomeworkAPIUITests/Pods-HomeworkAPIUITests.release.xcconfig"; sourceTree = "<group>"; };
-		EC3BEC831E01E3B300301DB2 /* MyArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyArticle.swift; path = ../../../../../Documents/MyArticle.swift; sourceTree = "<group>"; };
+		EC6A9ACC1E0352AE0054AA15 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../Library/Developer/Xcode/DerivedData/HomeworkAPI-fznmjgyqbevhaggwoemkhvgetact/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		EC6B1F1C1E048B8A00E52DE7 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +83,7 @@
 		AD159F70ADDAB8EADFD54C03 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EC6A9ACC1E0352AE0054AA15 /* SwiftyJSON.framework */,
 				596B9E38725993D164992964 /* Pods_HomeworkAPI.framework */,
 				19E96603CE0CA070622724AE /* Pods_HomeworkAPIUITests.framework */,
 			);
@@ -136,7 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				B20BAC721E00770E00E68E8C /* ArticleTableViewController.swift */,
-				B20BAC741E0079C200E68E8C /* ArticleTableViewCell.swift */,
+				EC6B1F1C1E048B8A00E52DE7 /* ArticleTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -153,7 +153,6 @@
 		EC3BEC851E01E3F500301DB2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EC3BEC831E01E3B300301DB2 /* MyArticle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,6 +213,7 @@
 				TargetAttributes = {
 					B2E3D0591E001D3900902DB3 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 6FG4LSVW6C;
 						ProvisioningStyle = Automatic;
 					};
 					B2E3D06D1E001D4100902DB3 = {
@@ -360,9 +360,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC3BEC841E01E3B300301DB2 /* MyArticle.swift in Sources */,
 				B20BAC731E00770E00E68E8C /* ArticleTableViewController.swift in Sources */,
-				B20BAC751E0079C300E68E8C /* ArticleTableViewCell.swift in Sources */,
+				EC6B1F1D1E048B8A00E52DE7 /* ArticleTableViewCell.swift in Sources */,
 				B2E3D05E1E001D3F00902DB3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +483,7 @@
 			baseConfigurationReference = 0C8383DAE412D8E2D0C49580 /* Pods-HomeworkAPI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6FG4LSVW6C;
 				INFOPLIST_FILE = HomeworkAPI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HRD.HomeworkAPI;
@@ -497,6 +497,7 @@
 			baseConfigurationReference = BC32C32A7E3B5B636637046A /* Pods-HomeworkAPI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6FG4LSVW6C;
 				INFOPLIST_FILE = HomeworkAPI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HRD.HomeworkAPI;

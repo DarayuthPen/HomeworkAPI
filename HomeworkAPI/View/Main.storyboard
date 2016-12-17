@@ -59,6 +59,11 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="9im-DU-9a7" secondAttribute="trailing" constant="5" id="qyJ-Z2-vHR"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="DescriptionLable" destination="MU8-bq-3rn" id="t02-9L-aMq"/>
+                                    <outlet property="PhotoImageView" destination="9im-DU-9a7" id="YJb-KZ-BD2"/>
+                                    <outlet property="TitleLable" destination="EGH-dh-q4r" id="xUg-1c-w5F"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
