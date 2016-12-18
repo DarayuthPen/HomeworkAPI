@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B20BAC731E00770E00E68E8C /* ArticleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20BAC721E00770E00E68E8C /* ArticleTableViewController.swift */; };
+		B21394121E051276005C43E5 /* PostArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21394111E051275005C43E5 /* PostArticleViewController.swift */; };
 		B2E3D05E1E001D3F00902DB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E3D05D1E001D3F00902DB3 /* AppDelegate.swift */; };
 		B2E3D0651E001D4000902DB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2E3D0641E001D4000902DB3 /* Assets.xcassets */; };
 		B2E3D0731E001D4100902DB3 /* HomeworkAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E3D0721E001D4100902DB3 /* HomeworkAPIUITests.swift */; };
@@ -34,6 +35,7 @@
 		1B1C53AFCE4C339DAA483CFE /* Pods-HomeworkAPIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeworkAPIUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomeworkAPIUITests/Pods-HomeworkAPIUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		596B9E38725993D164992964 /* Pods_HomeworkAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeworkAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B20BAC721E00770E00E68E8C /* ArticleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewController.swift; sourceTree = "<group>"; };
+		B21394111E051275005C43E5 /* PostArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostArticleViewController.swift; sourceTree = "<group>"; };
 		B2E3D05A1E001D3F00902DB3 /* HomeworkAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeworkAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E3D05D1E001D3F00902DB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2E3D0641E001D4000902DB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			children = (
 				B20BAC721E00770E00E68E8C /* ArticleTableViewController.swift */,
 				EC6B1F1C1E048B8A00E52DE7 /* ArticleTableViewCell.swift */,
+				B21394111E051275005C43E5 /* PostArticleViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				B20BAC731E00770E00E68E8C /* ArticleTableViewController.swift in Sources */,
 				EC6B1F1D1E048B8A00E52DE7 /* ArticleTableViewCell.swift in Sources */,
 				B2E3D05E1E001D3F00902DB3 /* AppDelegate.swift in Sources */,
+				B21394121E051276005C43E5 /* PostArticleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
