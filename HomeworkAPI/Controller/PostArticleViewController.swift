@@ -77,24 +77,40 @@ class PostArticleViewController: UIViewController, UIImagePickerControllerDelega
         body.append("--\(boundary)--\r\n".data(using: String.Encoding.utf8)!)
         
         request.httpBody = body as Data
-        let pdata = body as Data
+        let data = body as Data
         
-        let task = URLSession.shared.uploadTask(with: request, from: pdata) { (data, response, error) in
+        let session = URLSession.shared
+        let task = session.uploadTask(with: request, from: data) {
+            (data, response, error) in
             
-            let dat = try! JSONSerialization.jsonObject(with: pdata, options: []) as! [String:Any]
-            d = (dat["DATA"] as! String)
+            print("YUTH")
+            
+            guard let data = data, error == nil else {
+                if let error = error as? NSError{
+                    self.FetchErrorFromClient(errorMessage : error)
+                }
+                return
+            }
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+                // check for http errors
+                self.FetchDataResponseHTTPEroro(errorResponse: httpStatus)
+                return
+            }
+            
+            let dat = try! JSONSerialization.jsonObject(with: data, options: []) as! [String:Any]
+            d = dat["DATA"] as! String?
             
             print("success --->")
             print(d!)
         }
         
-        task.resume()
-        
         if let url = d {
             return url
         }else{
-            return "error"
+            return ""
         }
+        
+        task.resume()
     }
 
     //Post Data
